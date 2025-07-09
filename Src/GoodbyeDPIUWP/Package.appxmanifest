@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
+  xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+  IgnorableNamespaces="uap mp uap3 iot uap2">
+
+  <Identity
+    Name="ME.GoodbyeDPIUWPV1"
+    Publisher="CN=Admin"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="4de4ae0d-c06c-4e0e-b989-4bc261e32bf0" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>GoodbyeDPIUWP</DisplayName>
+    <PublisherDisplayName>Admin</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="GoodbyeDPIUWP.App">
+      <uap:VisualElements
+        DisplayName="GoodbyeDPIUWP"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
+        Description="GoodbyeDPIUWP"
+        BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape"/>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscapeFlipped"/></uap:InitialRotationPreference>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <uap:Capability Name="removableStorage"/>
+    <Capability Name="privateNetworkClientServer"/>
+    <uap3:Capability Name="userNotificationListener"/>
+    <uap:Capability Name="voipCall"/>
+    <iot:Capability Name="lowLevelDevices"/>
+    <Capability Name="internetClientServer"/>
+    <uap2:Capability Name="spatialPerception"/>
+    <iot:Capability Name="systemManagement"/>
+    <DeviceCapability Name="pointOfService"/>
+    <DeviceCapability Name="lowLevel"/>
+    <DeviceCapability Name="bluetooth"/>
+  </Capabilities>
+</Package>
